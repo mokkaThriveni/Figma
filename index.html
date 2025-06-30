@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Figma Design</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #1e1f25, #2e2f36);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      overflow: hidden;
+      padding: 20px;
+    }
+
+    .title {
+      font-size: 2.8rem;
+      margin-bottom: 40px;
+      animation: fadeInDown 1s ease-out;
+    }
+
+    .title .glow {
+      color: hsl(0, 100%, 50%);
+    }
+
+    .category-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 25px;
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      justify-content: center;
+    }
+
+    .category-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 30px;
+      cursor: pointer;
+      transition: all 0.4s ease;
+      transform-style: preserve-3d;
+      box-shadow: 0 10px 30px rgba(0, 255, 200, 0.05);
+      animation: floatUp 1s ease forwards;
+      text-decoration: none;
+    }
+
+    .category-card h2 {
+      font-size: 1.3rem;
+      font-weight: bold;
+      background: linear-gradient(90deg, #d7e3e0, #dce1e1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transform: rotateX(10deg);
+      transition: all 0.4s ease;
+    }
+
+    .category-card:hover {
+      transform: rotateY(8deg) scale(1.05);
+      box-shadow: 0 20px 50px rgba(215, 225, 223, 0.3);
+    }
+
+    .category-card:hover h2 {
+      transform: rotateX(0deg) scale(1.1);
+    }
+
+    @keyframes fadeInDown {
+      from { transform: translateY(-30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(20px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    @media (max-width: 600px) {
+      body {
+        height: auto;
+        padding: 20px 10px;
+        overflow: auto;
+      }
+
+      .category-card {
+        padding: 20px;
+      }
+
+      .category-card h2 {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1 class="title"> <span class="glow">My Figma Designs</span></h1>
+
+  <div class="category-container">
+    <a href="https://www.figma.com/proto/gxL8WENy9IGKfKR0AZ1dmX/Untitled?node-id=65-121&t=ulrDb5oR4XbnQNCP-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=11%3A450&show-proto-sidebar=1" target="_blank" class="category-card">
+      <h2>WHAT'S APP</h2>
+    </a>
+    <a href="https://www.figma.com/proto/MvNBkWtvl1e1Dk6bLuz7n4/Untitled?node-id=9-381&t=YsLbcS9Pcx3FoLTZ-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=9%3A381&show-proto-sidebar=1"  target="_blank"class="category-card">
+      <h2>SPICE POT</h2>
+    </a>
+    <a href="https://www.figma.com/proto/LwtjXWSi5tuxT5c09kUD93/Untitled?node-id=35-168&t=HYcSOKXkhqUkR9Gw-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=35%3A168&show-proto-sidebar=1" target="_blank" class="category-card">
+      <h2>PHONE PAY</h2>
+    </a>
+    <a href="https://www.figma.com/board/DiaAWX9EqMoNgOmTBfFbvH/Untitled?node-id=0-1&t=0oQb7jLfpBLzYn1t-1"  target="_blank" class="category-card" >
+      <h2>FLOW CHART</h2>
+    </a>
+    
+  </div>
+
+</body>
+</html>
